@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="robertmuhlesteinsoftware2.View.ReportController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="ScheduleTabHandler" text="Consultant Schedule">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="ConsultantScheduleTable" layoutY="21.0" prefHeight="299.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="StartColumn" prefWidth="123.33334600925446" text="Start" />
+                            <TableColumn fx:id="EndColumn" prefWidth="121.33336639404297" text="End" />
+                              <TableColumn fx:id="CustomerColumn" prefWidth="122.66664123535156" text="Customer" />
+                              <TableColumn fx:id="CTypeColumn" prefWidth="104.6666259765625" text="Type" />
+                              <TableColumn fx:id="DescriptionColumn" prefWidth="128.66665649414062" text="Description" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="LogoutButton" layoutX="534.0" layoutY="332.0" mnemonicParsing="false" onAction="#LogoutButtonHandler" text="Logout" />
+                        <Button fx:id="ReturnButton" layoutX="452.0" layoutY="332.0" mnemonicParsing="false" onAction="#ReturnButtonHandler" text="Return" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="TypeTabHandler" text="Appointment Types by Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="387.0" prefWidth="599.0">
+                     <children>
+                        <TableView fx:id="ApptTypeTable" layoutX="109.0" layoutY="14.0" prefHeight="307.0" prefWidth="381.0">
+                          <columns>
+                            <TableColumn fx:id="TypeColumn" prefWidth="106.66665649414062" text="Type" />
+                            <TableColumn fx:id="MonthColumn" prefWidth="111.33333778381348" text="Month" />
+                              <TableColumn fx:id="NumApptColumn" prefWidth="160.00001525878906" text="Number of Appointments" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="LogoutButton" layoutX="534.0" layoutY="332.0" mnemonicParsing="false" onAction="#LogoutButtonHandler" text="Logout" />
+                        <Button fx:id="ReturnButton" layoutX="452.0" layoutY="332.0" mnemonicParsing="false" onAction="#ReturnButtonHandler" text="Return" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="DetailsTabHandler" text="Appointments Per Day">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="ApptPerDayTable" layoutX="133.0" layoutY="14.0" prefHeight="304.0" prefWidth="334.0">
+                          <columns>
+                            <TableColumn fx:id="DateColumn" prefWidth="83.33331298828125" text="Date" />
+                            <TableColumn fx:id="ConsultantColumn" prefWidth="130.6667022705078" text="Consultant" />
+                              <TableColumn fx:id="ApptsNumColumn" prefWidth="120.0" text="# of Appointments" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="LogoutButton" layoutX="534.0" layoutY="332.0" mnemonicParsing="false" onAction="#LogoutButtonHandler" text="Logout" />
+                        <Button fx:id="ReturnButton" layoutX="452.0" layoutY="332.0" mnemonicParsing="false" onAction="#ReturnButtonHandler" text="Return" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
